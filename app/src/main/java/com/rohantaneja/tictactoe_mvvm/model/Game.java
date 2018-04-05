@@ -24,6 +24,50 @@ public class Game {
         currentPlayer = (currentPlayer == player1 ? player2 : player1);
     }
 
+    private boolean areCellsEqual(Cell... cells) {
+
+        //check if 2D array is null or empty
+        if (cells == null || cells.length == 0) {
+            return false;
+        }
+
+        //check if each cell of the array is null or empty
+        for (Cell cell : cells)
+            if (cell == null || cell.getPlayer().getValue() == null || cell.getPlayer().getValue().length() == 0)
+                return false;
+
+        //compare the values in all three cells
+        for (int i = 1; i < cells.length; i++) {
+
+            //if any 2 values do not match => cells are not equal => return false
+            if (!cells[0].getPlayer().getValue().equals(cells[i].getPlayer().getValue()))
+                return false;
+        }
+
+        return true;
+    }
+
+    public boolean hasThreeSameHorizontalCells() {
+        for (int i = 0; i < BOARD_SIZE; i++)
+            if (areCellsEqual(cells[i][0], cells[i][1], cells[i][2]))
+                return true;
+
+        return false;
+    }
+
+    public boolean hasThreeSameVerticalCells() {
+        for (int i = 0; i < BOARD_SIZE; i++)
+            if (areCellsEqual(cells[0][i], cells[1][i], cells[2][i]))
+                return true;
+
+        return false;
+    }
+
+    public boolean hasThreeSameDiagonalCells() {
+        return areCellsEqual(cells[0][0], cells[1][1], cells[2][2]) || areCellsEqual(cells[0][2], cells[1][1], cells[2][0]);
+    }
+
+    //getters
     public Player getCurrentPlayer() {
         return currentPlayer;
     }
@@ -44,6 +88,7 @@ public class Game {
         return cells;
     }
 
+    //setters
     public void setCurrentPlayer(Player currentPlayer) {
         this.currentPlayer = currentPlayer;
     }
