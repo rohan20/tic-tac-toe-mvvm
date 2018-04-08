@@ -47,6 +47,30 @@ public class Game {
         return true;
     }
 
+    public boolean hasGameEnded() {
+        if (hasThreeSameDiagonalCells() || hasThreeSameHorizontalCells() || hasThreeSameVerticalCells()) {
+            winner = currentPlayer;
+            return true;
+        }
+
+        if (isBoardFull()) {
+            winner = null;
+            return true;
+        }
+
+        return false;
+    }
+
+    private boolean isBoardFull() {
+        for (Cell[] row : cells) {
+            for (Cell cell : row)
+                if (cell == null || cell.isEmpty())
+                    return false;
+        }
+
+        return true;
+    }
+
     public boolean hasThreeSameHorizontalCells() {
         for (int i = 0; i < BOARD_SIZE; i++)
             if (areCellsEqual(cells[i][0], cells[i][1], cells[i][2]))
