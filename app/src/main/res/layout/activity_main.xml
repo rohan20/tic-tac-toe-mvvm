@@ -26,6 +26,7 @@
             android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
+            android:background="@drawable/cell_00"
             android:text="X" />
 
         <TextView
@@ -37,6 +38,7 @@
             android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
+            android:background="@drawable/cell_01"
             android:gravity="center"
             android:text="X" />
 
@@ -49,6 +51,7 @@
             android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
+            android:background="@drawable/cell_02"
             android:text="X" />
 
         <TextView
@@ -60,6 +63,7 @@
             android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
+            android:background="@drawable/cell_10"
             android:text="X" />
 
         <TextView
@@ -82,6 +86,7 @@
             android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
+            android:background="@drawable/cell_12"
             android:text="X" />
 
         <TextView
@@ -93,6 +98,7 @@
             android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
+            android:background="@drawable/cell_20"
             android:text="X" />
 
         <TextView
@@ -104,6 +110,7 @@
             android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
+            android:background="@drawable/cell_21"
             android:text="X" />
 
         <TextView
@@ -115,6 +122,7 @@
             android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
+            android:background="@drawable/cell_22"
             android:text="X" />
 
     </GridLayout>
