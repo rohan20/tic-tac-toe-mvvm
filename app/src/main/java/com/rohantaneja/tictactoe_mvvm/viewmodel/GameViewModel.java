@@ -1,5 +1,6 @@
 package com.rohantaneja.tictactoe_mvvm.viewmodel;
 
+import com.rohantaneja.tictactoe_mvvm.model.Cell;
 import com.rohantaneja.tictactoe_mvvm.model.Game;
 import com.rohantaneja.tictactoe_mvvm.model.Player;
 
@@ -23,5 +24,22 @@ public class GameViewModel extends Observable {
         game.setPlayer1(player1);
         game.setPlayer2(player2);
         game.setCurrentPlayer(player1);
+    }
+
+    private void onClickedCellAt(int row, int column) {
+        Cell[][] cell = game.getCells();
+        cell[row][column] = new Cell(game.getCurrentPlayer());
+
+        if (game.hasGameEnded()) {
+            onGameHasEnded();
+        }
+
+        game.switchPlayer();
+    }
+
+    private void onGameHasEnded() {
+        setChanged();
+        notifyObservers(game.getWinner() == null ? "No winner" : game.getWinner().getName());
+        game.resetGame();
     }
 }

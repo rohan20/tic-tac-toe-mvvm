@@ -71,7 +71,14 @@ public class Game {
         return true;
     }
 
-    public boolean hasThreeSameHorizontalCells() {
+    public void resetGame() {
+        player1 = null;
+        player2 = null;
+        currentPlayer = null;
+        cells = null;
+    }
+
+    private boolean hasThreeSameHorizontalCells() {
         for (int i = 0; i < BOARD_SIZE; i++)
             if (areCellsEqual(cells[i][0], cells[i][1], cells[i][2]))
                 return true;
@@ -79,7 +86,7 @@ public class Game {
         return false;
     }
 
-    public boolean hasThreeSameVerticalCells() {
+    private boolean hasThreeSameVerticalCells() {
         for (int i = 0; i < BOARD_SIZE; i++)
             if (areCellsEqual(cells[0][i], cells[1][i], cells[2][i]))
                 return true;
@@ -87,7 +94,7 @@ public class Game {
         return false;
     }
 
-    public boolean hasThreeSameDiagonalCells() {
+    private boolean hasThreeSameDiagonalCells() {
         return areCellsEqual(cells[0][0], cells[1][1], cells[2][2]) || areCellsEqual(cells[0][2], cells[1][1], cells[2][0]);
     }
 
