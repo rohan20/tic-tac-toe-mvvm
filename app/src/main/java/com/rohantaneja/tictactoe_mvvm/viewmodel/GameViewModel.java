@@ -26,7 +26,7 @@ public class GameViewModel extends Observable {
         game.setCurrentPlayer(player1);
     }
 
-    private void onClickedCellAt(int row, int column) {
+    public void onClickedCellAt(int row, int column) {
         Cell[][] cell = game.getCells();
         cell[row][column] = new Cell(game.getCurrentPlayer());
 

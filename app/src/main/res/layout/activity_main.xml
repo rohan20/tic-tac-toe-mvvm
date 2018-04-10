@@ -27,6 +27,7 @@
             android:layout_row="1"
             android:layout_rowWeight="1"
             android:background="@drawable/cell_00"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(0,0)}"
             android:text="X" />
 
         <TextView
@@ -40,6 +41,7 @@
             android:layout_rowWeight="1"
             android:background="@drawable/cell_01"
             android:gravity="center"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(0,1)}"
             android:text="X" />
 
         <TextView
@@ -52,6 +54,7 @@
             android:layout_row="1"
             android:layout_rowWeight="1"
             android:background="@drawable/cell_02"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(0,2)}"
             android:text="X" />
 
         <TextView
@@ -64,6 +67,7 @@
             android:layout_row="2"
             android:layout_rowWeight="1"
             android:background="@drawable/cell_10"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(1,0)}"
             android:text="X" />
 
         <TextView
@@ -75,6 +79,7 @@
             android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(1,1)}"
             android:text="X" />
 
         <TextView
@@ -87,6 +92,7 @@
             android:layout_row="2"
             android:layout_rowWeight="1"
             android:background="@drawable/cell_12"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(1,2)}"
             android:text="X" />
 
         <TextView
@@ -99,6 +105,7 @@
             android:layout_row="3"
             android:layout_rowWeight="1"
             android:background="@drawable/cell_20"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(2,0)}"
             android:text="X" />
 
         <TextView
@@ -111,6 +118,7 @@
             android:layout_row="3"
             android:layout_rowWeight="1"
             android:background="@drawable/cell_21"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(2,1)}"
             android:text="X" />
 
         <TextView
@@ -123,6 +131,7 @@
             android:layout_row="3"
             android:layout_rowWeight="1"
             android:background="@drawable/cell_22"
+            android:onClick="@{() -> gameViewModel.onClickedCellAt(2,2)}"
             android:text="X" />
 
     </GridLayout>
