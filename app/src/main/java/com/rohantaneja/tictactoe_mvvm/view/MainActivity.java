@@ -15,6 +15,7 @@ import java.util.Observer;
 public class MainActivity extends AppCompatActivity implements Observer {
 
     private static final String GAME_BEGIN_DIALOG_TAG = "game_begin_dialog_fragment";
+    private static final String GAME_END_DIALOG_FRAGMENT = "game_end_dialog_fragment";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +43,8 @@ public class MainActivity extends AppCompatActivity implements Observer {
 
     @Override
     public void update(Observable observable, Object winnerName) {
-
+        GameEndDialogFragment gameEndDialogFragment = GameEndDialogFragment.newInstance(this, (String) winnerName);
+        gameEndDialogFragment.show(getFragmentManager(), GAME_END_DIALOG_FRAGMENT);
     }
 
 }
