@@ -7,6 +7,8 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.rohantaneja.tictactoe_mvvm.R;
@@ -40,12 +42,7 @@ public class GameBeginDialogFragment extends DialogFragment {
                 .setView(rootView)
                 .setTitle("Enter player names")
                 .setCancelable(false)
-                .setPositiveButton("Done", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        onDoneClicked();
-                    }
-                })
+                .setPositiveButton("Done", null)
                 .create();
 
         alertDialog.setCanceledOnTouchOutside(false);
@@ -61,6 +58,13 @@ public class GameBeginDialogFragment extends DialogFragment {
     }
 
     private void onDialogShow(AlertDialog alertDialog) {
+        Button dialogDoneButton = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
+        dialogDoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onDoneClicked();
+            }
+        });
     }
 
     private void onDoneClicked() {
