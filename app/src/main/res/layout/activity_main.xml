@@ -28,7 +28,7 @@
             android:layout_rowWeight="1"
             android:background="@drawable/cell_00"
             android:onClick="@{() -> gameViewModel.onClickedCellAt(0,0)}"
-            android:text="X" />
+            android:text='@{gameViewModel.cellValuesMap["00"]}' />
 
         <TextView
             android:id="@+id/cell_01"
@@ -42,7 +42,7 @@
             android:background="@drawable/cell_01"
             android:gravity="center"
             android:onClick="@{() -> gameViewModel.onClickedCellAt(0,1)}"
-            android:text="X" />
+            android:text='@{gameViewModel.cellValuesMap["01"]}' />
 
         <TextView
             android:id="@+id/cell_02"
@@ -55,7 +55,7 @@
             android:layout_rowWeight="1"
             android:background="@drawable/cell_02"
             android:onClick="@{() -> gameViewModel.onClickedCellAt(0,2)}"
-            android:text="X" />
+            android:text='@{gameViewModel.cellValuesMap["02"]}' />
 
         <TextView
             android:id="@+id/cell_10"
@@ -68,7 +68,7 @@
             android:layout_rowWeight="1"
             android:background="@drawable/cell_10"
             android:onClick="@{() -> gameViewModel.onClickedCellAt(1,0)}"
-            android:text="X" />
+            android:text='@{gameViewModel.cellValuesMap["10"]}' />
 
         <TextView
             android:id="@+id/cell_11"
@@ -80,7 +80,7 @@
             android:layout_row="2"
             android:layout_rowWeight="1"
             android:onClick="@{() -> gameViewModel.onClickedCellAt(1,1)}"
-            android:text="X" />
+            android:text='@{gameViewModel.cellValuesMap["11"]}' />
 
         <TextView
             android:id="@+id/cell_12"
@@ -93,7 +93,7 @@
             android:layout_rowWeight="1"
             android:background="@drawable/cell_12"
             android:onClick="@{() -> gameViewModel.onClickedCellAt(1,2)}"
-            android:text="X" />
+            android:text='@{gameViewModel.cellValuesMap["12"]}' />
 
         <TextView
             android:id="@+id/cell_20"
@@ -106,7 +106,7 @@
             android:layout_rowWeight="1"
             android:background="@drawable/cell_20"
             android:onClick="@{() -> gameViewModel.onClickedCellAt(2,0)}"
-            android:text="X" />
+            android:text='@{gameViewModel.cellValuesMap["20"]}' />
 
         <TextView
             android:id="@+id/cell_21"
@@ -119,7 +119,7 @@
             android:layout_rowWeight="1"
             android:background="@drawable/cell_21"
             android:onClick="@{() -> gameViewModel.onClickedCellAt(2,1)}"
-            android:text="X" />
+            android:text='@{gameViewModel.cellValuesMap["21"]}' />
 
         <TextView
             android:id="@+id/cell_22"
@@ -132,7 +132,7 @@
             android:layout_rowWeight="1"
             android:background="@drawable/cell_22"
             android:onClick="@{() -> gameViewModel.onClickedCellAt(2,2)}"
-            android:text="X" />
+            android:text='@{gameViewModel.cellValuesMap["22"]}' />
 
     </GridLayout>
 </layout>
