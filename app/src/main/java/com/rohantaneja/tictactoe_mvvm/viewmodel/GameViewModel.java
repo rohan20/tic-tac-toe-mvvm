@@ -45,7 +45,7 @@ public class GameViewModel extends Observable {
 
     private void onGameHasEnded() {
         setChanged();
-        notifyObservers(game.getWinner() == null ? "No winner" : game.getWinner().getName());
+        notifyObservers(game.getWinner() == null ? "No winner" : "Winner: " + game.getWinner().getName());
         game.resetGame();
     }
 }

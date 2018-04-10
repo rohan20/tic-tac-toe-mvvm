@@ -43,7 +43,6 @@ public class GameEndDialogFragment extends DialogFragment {
 
         final AlertDialog alertDialog = new AlertDialog.Builder(activity)
                 .setView(rootView)
-                .setTitle("Enter player names")
                 .setCancelable(false)
                 .setPositiveButton("Done", null)
                 .create();
