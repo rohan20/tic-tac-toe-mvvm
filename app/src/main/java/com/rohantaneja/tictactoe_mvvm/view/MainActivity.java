@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
         promptForPlayers();
     }
 
-    private void promptForPlayers() {
+    public void promptForPlayers() {
         GameBeginDialogFragment gameBeginDialogFragment = GameBeginDialogFragment.newInstance(this);
         gameBeginDialogFragment.show(getFragmentManager(), GAME_BEGIN_DIALOG_TAG);
     }
